@@ -1,0 +1,31 @@
+<script>
+//Insert dashes (-) between even numbers
+var str = "025468";
+var result = [str[0]];
+
+for (var i = 1; i < str.length; i++) {
+    if (str[i - 1] % 2 === 0 && str[i] % 2 === 0) {
+        result.push('-' + str[i]);
+    }
+    else {
+        result.push(str[i]);
+    }
+}
+console.log(result.join());
+
+//sort the nimbers 
+
+var arr1 = [3, 8, 7, 6, 5, -4, 3, 2, 11, 1];
+function orderBy(a, b) {
+    return (a == b) ? 0 : (a > b) ? 1 : -1
+};
+
+
+for (var i = 0; i < arr1.length; i++) {
+    arr1.sort(orderBy);
+}
+
+for (var i = 0; i < arr1.length; i++) {
+    console.log(arr1[i]);
+}
+</script>
